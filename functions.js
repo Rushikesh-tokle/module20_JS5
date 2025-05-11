@@ -76,3 +76,39 @@ sum+=i;
     return a+b;
   }
   console.log(sum(3,2));
+
+  //function expresssion higher order function
+  console.log("Function expression higher order function");
+  let greet=function(){
+    console.log("Hello");
+  }
+
+  function printGreet(func,n){
+ for(let i=1;i<=n;i++){
+  func();
+ }
+}
+
+printGreet(greet,4);
+
+//higher order function returns
+
+function oddEvenFactory(request){
+if(request=="odd"){
+ let odd=function(n){
+  console.log(!(n%2==0));
+ }
+ return odd;
+}
+else if(request=="even"){
+   let even=function(n){
+  console.log(n%2==0);
+}
+return even;
+}
+else{
+  console.log("wrong request");
+}
+}
+let request="odd";
+
