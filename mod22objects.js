@@ -81,3 +81,21 @@ let id2=setInterval(()=>{
 setTimeout(()=>{
     clearInterval(id2);
 },10000);
+
+//assignment module 22
+//question no 1
+console.log("Average of element form an array");
+let arr=[2,2,3,1];
+const arrayAverage=(arr)=>{
+    let sum=0;
+    for(ele of arr){
+      sum+=ele;
+    }
+    return sum/arr.length;
+}
+console.log(arrayAverage(arr));
+
+//question 2 check whether the given number is even or not
+const isEven=(n)=>n%2==0;
+console.log(isEven(3));
+
